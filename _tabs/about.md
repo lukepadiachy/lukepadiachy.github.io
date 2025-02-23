@@ -8,78 +8,43 @@ order: 4
 
 # Hey, I'm Luke 👋🏽
 
+---
+
 I'm a chilled Junior Software Developer at Full Stack based in South Africa, who calmly drops knowledge on all experiments relating to Software Development
-<ul dir="auto"> 
-<li>
-  Check out my  <a href="https://www.urbanuprise.co.za/" rel="nofollow">website</a> to see my two passions as one.</li>
-</li>
-<li>
-  Explore my  <a href="https://www.urbanuprise.co.za/learntocode" rel="nofollow">LearnToCodeSection</a> where I share insights on the journey and provide resources for those interested in learning to code.</li>
-</li>
-</ul>
+- Check out my  [website](https://www.urbanuprise.co.za/) to see my two passions as one.
+- Explore my  <a href="https://www.urbanuprise.co.za/learntocode" rel="nofollow">LearnToCodeSection</a> where I share insights on the journey and provide resources for those interested in learning to code.
 
 # 📦 Toolbox
-<p dir="auto">
-<strong>Coding Language</strong>
-<code>C#</code>
-<code>HTML</code>
-<code>TypeScript</code>
-</p>
-<p dir="auto">
-<strong>Version Control</strong>
-<code>Git</code>
-<code>Azure DevOps</code>
-</p>
-<p dir="auto">
-<strong>Backend Development</strong>
-<code>ASP.NET Core</code>
-<code>Entity Framework</code>
-</p>
-<p dir="auto">
-<strong>Frontend Development</strong>
-<code>Blazor</code>
-<code>CSS</code>
-</p>
-<p dir="auto">
-<strong>Tech Stacks</strong>
-<code>.NET</code>
-<code>Flutter</code>
-<code>Kotlin Multiplatform Compose</code>
-<code>React Native</code>
-</p>
-<p dir="auto">
-<strong>IDE</strong>
-<code>Visual Studio</code>
-<code>Visual Studio Code</code>
-<code>Android Studio</code>
-<p dir="auto">
-<strong>Others:</strong>
-<code>Canva</code>
-<code>Figma</code>
-<code>UI Design</code>
-<code>Video Editor</code>
-</p>
+
+---
+**Coding Language** : `C#` `HTML` `TypeScript`
+
+**Version Control** : `Git` `Azure DevOps`
+
+**Backend Development** : `ASP.NET Core` `Entity Framework` 
+
+**Frontend Development** : `Blazor` `CSS`
+
+**Tech Stacks** : `.NET` `Flutter` `Kotlin Multiplatform Compose` `React Native`
+
+**IDE** : `Visual Studio` `Visual Studio Code` `Android Studio`
+
+**Others** : `Canva` `Figma` `UI Design` `Video Editor`
+
 
 # ✨ Fun Facts
 
-<ul dir="auto">
-<li>
- Im a Rapper  <a href="https://www.urbanuprise.co.za/luke-padiachy" rel="nofollow">Artist Profile</a> where I share my musical journey
-</li>
-<li>
-  Anime is Life !
-</li>
-<li>
-  Mame32 was my Playstation as a Kid
-</li>
-</ul>
+- Im a Rapper [Artist Profile](https://www.urbanuprise.co.za/luke-padiachy) where I share my musical journey
+- Anime is Life !
+- Mame32 was my Playstation as a Kid
 
 # 📫 Contact
+---
 
-<p dir="auto">
-Get in Touch, Connect me on <a href="https://www.linkedin.com/in/luke-padiachy/" rel="nofollow">LinkedIn</a> . </p>
+Get in Touch, Connect me on [LinkedIn](https://www.linkedin.com/in/luke-padiachy)
 
 # 🏆 Trophies
+---
 
 <p dir="auto">
 <div>
