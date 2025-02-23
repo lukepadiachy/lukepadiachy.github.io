@@ -16,10 +16,10 @@ timezone:
 
 title: Luke Padiachy # the main title
 
-tagline: A chilled developer, who calmly drops knowledge on all experiments relating to Software Development # it will display as the subtitle
+tagline: Developer | Founder of Urban Uprise | Recording Artist at LSE | Tech Enthusiast | Driving Digital Solutions For Social Change | .NET Foundation Member  # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-   A blogpost of a dude sharing experiments of things learnt in software development.
+   A chilled developer, who calmly drops knowledge on all experiments relating to Software Development
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -102,7 +102,7 @@ avatar: /assets/img/lp.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: /assets/img/scoialpreview.png # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
