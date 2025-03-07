@@ -7,7 +7,7 @@ tags: [azure, devops, tutorials, beginners, resources]
 image: /assets/img/posts/2025-03/azure-devops.png
 ---
 
-## What is Azure DevOps for Beginners?
+## **What is Azure DevOps for Beginners?**
 
 Here’s a funny story about how this repository started. My friend Sim asked me one day, *“Bro, how do you add a project into Azure DevOps?”*  
 
@@ -21,7 +21,7 @@ Instead, I look online for the best guides and videos, pick out the exact steps 
 
 So, if you’ve ever felt stuck with Azure DevOps (like Sim and I did), this repository is here to help. It’s my way of making things a little easier for everyone.
 
-## Overview
+## **Overview**
 
 Here’s a quick look at what’s inside:
 
@@ -64,7 +64,7 @@ You’ll find step-by-step guides for:
 
 Each tutorial includes clear instructions and code snippets, so you can follow along and experiment with your own projects.  
 
-## Contributions
+## **Contributions**
 
 This repository is just my side of a story, but having a community of different individuals involved will turn this into a movie. If you’re just starting out or you’ve been using Azure DevOps for years, your contributions are welcome and appreciated!  
 
@@ -73,14 +73,14 @@ This repository is just my side of a story, but having a community of different 
 - **For Experts**: Share your knowledge! Your experience can help others avoid common pitfalls and learn best practices.  
 - **For Everyone**: This is a collaborative space. Your ideas, feedback, and improvements make this resource better for everyone.  
 
-### How You Can Help  
+### **How You Can Help**  
 Here are some ways you can contribute:  
 - **Improve Documentation**: Fix typos, clarify instructions, or add screenshots to make the guides easier to follow.  
 - **Add Tutorials**: Share your expertise by creating tutorials for different tech stacks or workflows.  
 - **Expand Resources**: Suggest helpful links, videos, or tools that others might find useful.  
 - **Report Issues**: Found a bug or something that doesn’t make sense? Let us know!  
 
-### Getting Started  
+### **Getting Started**  
 1. **Fork the Repository**: Create your own copy of the project.  
 2. **Make Your Changes**: Add new content, fix errors, or improve existing guides.  
 3. **Submit a Pull Request**: Share your changes with the community.  
@@ -90,17 +90,17 @@ Every contribution, no matter how small, makes a difference. Your effort helps m
 
 So, what are you waiting for? Let’s build something amazing together! 
 
-## Presentation Resources
+## **Presentation Resources**
 
 Want to share your Azure DevOps knowledge with others? We’ve got you covered!  
 
 This repository includes a **customizable PowerPoint presentation** that you can use for meetups, workshops, tech talks, or even team training sessions. It’s designed to be beginner-friendly while covering all the essential Azure DevOps concepts.  
 
-### What’s Inside?  
+### **What’s Inside?**  
 - **PowerPoint Template**: A clean template that’s easy to edit.  
 - **Cool Visuals**: Visuals to make your talk more engaging.  
 
-### How to Use It  
+### **How to Use It**  
 1. **Download the Template**: Find it in the `/presentation` folder.  
 2. **Make It Your Own**: Add your own examples, stories or style to the slides.  
 3. **Share Your Knowledge**: Use it for meetups, workshops or even internal team training.  
@@ -109,7 +109,7 @@ This is my way of giving back to the community. So If you’re presenting to a s
 
 So go ahead, customize it, and have fun with it! 
 
-## Conclusion
+## **Conclusion**
 
 Wow I have not provided the link repo haha. From beginner-friendly tutorials to tips for troubleshooting common issues, everything is designed to make learning Azure DevOps as easy and fun as possible within this repo.  
 

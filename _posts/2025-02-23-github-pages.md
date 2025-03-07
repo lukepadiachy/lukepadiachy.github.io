@@ -7,11 +7,11 @@ tags: [blogpost, github, chirpy,github-pages, beginners]
 image: /assets/img/posts/2025-02/github.png
 ---
 
-## Welcome to GitHub Pages!
+## **Welcome to GitHub Pages!**
 
 If you’re new to the world of web development or looking for a simple way to get your content online, GitHub Pages is here to help. It’s a free service that lets you host your project blogs, documentation, resumes, portfolios, or any other static content right from a GitHub repository. No need to worry about complex servers or expensive hosting fees!
 
-## What Exactly Is GitHub Pages?
+## **What Exactly Is GitHub Pages?**
 
 At its core, GitHub Pages transforms your GitHub repository into a website. Here’s why that’s cool:
 
@@ -21,7 +21,7 @@ At its core, GitHub Pages transforms your GitHub repository into a website. Here
 
 For a quick overview, check out the [GitHub Pages homepage](https://pages.github.com/) for more details.
 
-## Why GitHub Pages Is Great for Anyone with Ideas
+## **Why GitHub Pages Is Great for Anyone with Ideas**
 
 If you’re just getting started and want to show off your ideas, projects, or products, GitHub Pages gives you a **powerful, free** platform. Here’s how you can use it:
 
@@ -36,7 +36,7 @@ If you’re just getting started and want to show off your ideas, projects, or p
 GitHub Pages is your digital canvas. Maybe you’re just getting started or you’ve already got a hustle? It’s a tool that lets you put your work out into the world without a hefty price tag.
 
 
-## A Peek Into the GitHub Pages Course
+## **A Peek Into the GitHub Pages Course**
 
 
 If you’re wondering where to start, there’s a beginner-friendly course that shows you how to get everything up and running. The course will teach you:
@@ -51,7 +51,7 @@ If you’re wondering where to start, there’s a beginner-friendly course that 
 
 The best part? It’s beginner-friendly. You can start at the [GitHub Pages Skills Course](https://github.com/skills/github-pages?tab=readme-ov-file).
 
-## What’s Next?
+## **What’s Next?**
 
 Now that you know the basics, consider the following steps:
 1. **Explore:** Visit the GitHub Pages homepage to see examples and more detailed documentation.
@@ -59,7 +59,7 @@ Now that you know the basics, consider the following steps:
 3. **Learn:** If you need a little extra guidance, the beginner course is a great way to familiarize yourself with the process without being overwhelmed by technical jargon.
 4. **Confused:** That's okay, everyone has to start somewhere , if you going through the docs and have no clue what github really is , try doing the **Introduction to GitHub**
 
-## Final Thoughts
+## **Final Thoughts**
 
 GitHub Pages isn’t just for techies, it’s for everyone. So If you’re a creative looking to share your work, an entrepreneur building your brand, or someone just trying to get an online presence, GitHub Pages makes it easy and **free**. 
 
