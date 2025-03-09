@@ -18,7 +18,7 @@ What does a musical note have to do with programming? Honestly speaking this is 
 
 If you want to learn more about .NET as a whole, I did a blogpost about it too [.NET for Beginners: A Newbies Perspective](https://lukepadiachy.github.io/posts/dotnet-beginners).
 
-## **C# in the Terminal**
+## **.NET in the Terminal**
 Im not going to assume you read the blogpost about **.NET** right away. Just a heads up that you will need .NET to be installed for this and other two sections, Browser is also an option Ill add at the end. 
 
 ### **Open up the Terminal**
