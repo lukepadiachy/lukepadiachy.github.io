@@ -211,6 +211,12 @@ You can start the tutorial [here](https://dotnet.microsoft.com/en-us/learn/dotne
 
 ![Terminal](/assets/img/posts/2025-03/c-sharp-images/csharp-twelve.png)
 
+## **Youtube Video**
+Here's an amazing video by **Scott Hanselman** &  **David Fowler** from their **C# for Beginners Series**, which is where I learnt the small terminal tips and tricks.
+
+{% include embed/youtube.html id="HFLALzkcjLM" %}
+
+
 ## **Conclusion**
 
 And there you have it, from the CLI to the IDE and a random sprinkle of Browser in terms of getting started with C#. So there's quite a few ways you can get started with this. Pretty much it's all there for you to take advantage of since its free.
