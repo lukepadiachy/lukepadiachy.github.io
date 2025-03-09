@@ -1,6 +1,6 @@
 ---
 title: "From The CLI To The IDE: C# Introduction"
-description: "An introduction to C# covering both command-line and IDE-based development. Let's add browser too"
+description: "An introduction to C# covering development from the command-line to the IDE and even running code directly in the browser."
 date: 2025-03-09 13:41:00 +0200
 categories: [C#, .NET]
 tags: [csharp, .net, beginners, programming, development]
