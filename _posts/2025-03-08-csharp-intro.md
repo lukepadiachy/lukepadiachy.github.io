@@ -1,6 +1,6 @@
 ---
 title: "From The CLI To The IDE: C# Introduction"
-description: "An introduction to C# covering development from the command-line to the IDE and even running code directly in the browser."
+description: "An introduction to C# covering development from the command-line to the IDE and even running code directly in the browser using online C# Compilers."
 date: 2025-03-09 13:41:00 +0200
 categories: [C#, .NET]
 tags: [csharp, .net, beginners, programming, development]
@@ -9,7 +9,7 @@ image: /assets/img/posts/2025-03/csharp-intro.png
 
 ## **Purpose**
 
-You ever wondered what it's like to write your first line of code? Is it only for those dubbed as **'smart'** or the dude/dudette sitting in their room with a hoodie hacking the neighbors WiFi isolated from society? Maybe the latest & greatest tech? Perhaps spending a couple a bucks to get started? Well, let me say this, NO! All you need is passion, a passion for learning something new, I mean you could **'borrow'** someone's laptop or head to the nearest library to try this out if you're in a position where access to machines are pretty limited. I'll provide a in-browser section aswell.
+You ever wondered what it's like to write your first line of code? Is it only for those dubbed as **'smart'** or the dude/dudette sitting in their room with a hoodie hacking the neighbors WiFi isolated from society? Maybe the latest & greatest tech? Perhaps spending a couple a bucks to get started? Well, let me say this, NO! All you need is passion, a passion for learning something new, I mean you could **'borrow'** someone's laptop or head to the nearest library to try this out if you're in a position where access to machines are pretty limited. I'll provide a in-browser section aswell, which covers running code directly in the browser using online C# Compilers.
 
 This is literally for anyone, for those who are curious, those with goals and those with a vision. We'll start with the basics of C# taking it from our CLI to our IDE and Browser.
 
