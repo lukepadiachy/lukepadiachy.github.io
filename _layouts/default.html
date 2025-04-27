@@ -17,10 +17,15 @@ layout: compress
   {% include head.html %}
 
   <body>
+    <!-- Original sidebar is still included but hidden via CSS -->
     {% include sidebar.html lang=lang %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
+        <!-- Include our custom top navigation bar -->
+        {% include custom/top-nav.html lang=lang %}
+        
+        <!-- Original topbar still included but some elements hidden via CSS -->
         {% include topbar.html lang=lang %}
 
         <div class="row flex-grow-1">
@@ -54,7 +59,8 @@ layout: compress
               {% include {{ _include_path }} lang=lang %}
             {% endfor %}
 
-            {% include_cached footer.html lang=lang %}
+            <!-- Use our custom footer instead of the original -->
+            {% include custom/footer.html lang=lang %}
           </div>
         </div>
 

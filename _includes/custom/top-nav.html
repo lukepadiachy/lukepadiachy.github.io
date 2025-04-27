@@ -1,0 +1,106 @@
+<!-- The Top Navigation Bar -->
+
+<div id="top-nav" aria-label="Top Navigation">
+  <div class="profile-wrapper">
+    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+      {%- if site.avatar != empty and site.avatar -%}
+        {%- capture avatar_url -%}
+          {% include media-url.html src=site.avatar %}
+        {%- endcapture -%}
+        <img src="{{- avatar_url -}}" alt="avatar" onerror="this.style.display='none'">
+      {%- endif -%}
+    </a>
+
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  </div>
+
+  <!-- Hamburger menu toggle for mobile -->
+  <button type="button" class="menu-toggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav class="nav">
+    <!-- home -->
+    <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+      <a href="{{ '/' | relative_url }}" class="nav-link">
+        <i class="fa-fw fas fa-home"></i>
+        <span>{{ site.data.locales[include.lang].tabs.home | default: "Home" }}</span>
+      </a>
+    </li>
+    <!-- the real tabs -->
+    {% for tab in site.tabs %}
+      <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+        <a href="{{ tab.url | relative_url }}" class="nav-link">
+          <i class="fa-fw {{ tab.icon }}"></i>
+          {% capture tab_name %}{{ tab.url | split: '/' | last }}{% endcapture %}
+
+          <span>{{ site.data.locales[include.lang].tabs[tab_name] | default: tab.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+
+    <!-- Toggle theme mode -->
+    {% unless site.theme_mode %}
+      <li class="nav-item">
+        <button type="button" class="btn nav-link" aria-label="Switch Mode" id="mode-toggle">
+          <i class="fas fa-adjust"></i>
+        </button>
+      </li>
+    {% endunless %}
+  </nav>
+</div>
+
+<div id="search-wrapper">
+  <search id="search" class="d-flex align-items-center">
+    <i class="fas fa-search fa-fw"></i>
+    <input
+      class="form-control"
+      id="search-input"
+      type="search"
+      aria-label="search"
+      autocomplete="off"
+      placeholder="{{ site.data.locales[include.lang].search.hint | default: 'Search' | capitalize }}..."
+    >
+  </search>
+</div>
+
+<!-- Add JavaScript for scroll behavior and mobile menu toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // For hide/show on scroll
+    var lastScrollTop = 0;
+    var navbar = document.getElementById('top-nav');
+    var delta = 5;
+    var navbarHeight = navbar.offsetHeight;
+
+    window.addEventListener('scroll', function() {
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Check if scrolled more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+      
+      // If scrolled down and past the navbar, add class .nav-up
+      if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        navbar.classList.add('nav-up');
+      } else {
+        // Scroll Up
+        if(st + window.innerHeight < document.body.offsetHeight) {
+          navbar.classList.remove('nav-up');
+        }
+      }
+      
+      lastScrollTop = st;
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if(menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('menu-active');
+      });
+    }
+  });
+</script>
