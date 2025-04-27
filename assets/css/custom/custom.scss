@@ -1,0 +1,19 @@
+---
+---
+
+/* Custom CSS to make blog post titles bold */
+
+/* Make blog post titles on homepage bold */
+#post-list h1.card-title {
+  font-weight: 700;
+}
+
+/* Make post headings inside articles bold */
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  font-weight: 700;
+}
+
+/* Make the main title on post pages bold */
+article.post h1[data-toc-skip] {
+  font-weight: 700;
+}
