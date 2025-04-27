@@ -64,7 +64,7 @@
   </search>
 </div>
 
-<!-- Add JavaScript for scroll behavior and mobile menu toggle -->
+<!-- Add JavaScript for improved scroll behavior and mobile menu toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // For hide/show on scroll
@@ -72,6 +72,7 @@
     var navbar = document.getElementById('top-nav');
     var delta = 5;
     var navbarHeight = navbar.offsetHeight;
+    var showThreshold = 100; // Only show navbar when near the top (within 100px)
 
     window.addEventListener('scroll', function() {
       var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -80,15 +81,13 @@
       if(Math.abs(lastScrollTop - st) <= delta)
         return;
       
-      // If scrolled down and past the navbar, add class .nav-up
-      if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
+      // Only show navbar when near the top of the page
+      if (st > showThreshold) {
+        // Hide navbar when not at the top
         navbar.classList.add('nav-up');
       } else {
-        // Scroll Up
-        if(st + window.innerHeight < document.body.offsetHeight) {
-          navbar.classList.remove('nav-up');
-        }
+        // Show navbar only when near the top of the page
+        navbar.classList.remove('nav-up');
       }
       
       lastScrollTop = st;
