@@ -93,13 +93,25 @@
       lastScrollTop = st;
     });
 
-    // Mobile menu toggle
+    // Mobile menu toggle - Fixed implementation
     const menuToggle = document.querySelector('.menu-toggle');
     
     if(menuToggle) {
-      menuToggle.addEventListener('click', function() {
+      // Ensure this is executed only once
+      menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         navbar.classList.toggle('menu-active');
       });
     }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (navbar.classList.contains('menu-active') && 
+          !navbar.contains(e.target) || 
+          e.target.closest('.nav-link')) {
+        navbar.classList.remove('menu-active');
+      }
+    });
   });
 </script>
