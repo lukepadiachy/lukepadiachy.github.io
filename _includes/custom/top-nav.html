@@ -64,7 +64,7 @@
   </search>
 </div>
 
-<!-- Inline script for mobile menu - this should hopefully will work in all environments including GitHub Pages -->
+<!-- Inline script for mobile menu with improved mobile touch functionality -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Get navigation elements
@@ -73,12 +73,20 @@
     
     if (!topNav || !menuToggle) return;
     
-    // Make sure menu toggle is visible on mobile
-    if (window.innerWidth <= 849) {
-      menuToggle.style.display = 'block';
+    // Always make sure menu toggle is visible on mobile
+    function checkViewport() {
+      if (window.innerWidth <= 849) {
+        menuToggle.style.display = 'block';
+      }
     }
     
-    // Handle menu toggle interaction
+    // Check on load
+    checkViewport();
+    
+    // Check on resize
+    window.addEventListener('resize', checkViewport);
+    
+    // Handle menu toggle interaction with better touch support
     function toggleMenu(e) {
       if (e) {
         e.preventDefault();
@@ -90,13 +98,18 @@
     // Add multiple event listeners for better mobile compatibility
     menuToggle.addEventListener('click', toggleMenu);
     
-    // Ensure mobile button works with touch events too
-    menuToggle.addEventListener('touchend', function(e) {
+    // Ensure mobile button works with touch events too - crucial for mobile devices
+    menuToggle.addEventListener('touchstart', function(e) {
       e.preventDefault();
-      toggleMenu();
+      toggleMenu(e);
     }, {passive: false});
     
-    // Handle clicks outside the menu to close it
+    // Improved touchend handler (more reliable on mobile)
+    menuToggle.addEventListener('touchend', function(e) {
+      e.preventDefault();
+    }, {passive: false});
+    
+    // Handle clicks/touches outside the menu to close it
     document.addEventListener('click', function(e) {
       if (topNav.classList.contains('menu-active') && 
           !topNav.contains(e.target) || 
@@ -105,7 +118,16 @@
       }
     });
     
-    // Hide/show navbar on scroll
+    // Additional touch event for document to handle mobile touchstart outside menu
+    document.addEventListener('touchstart', function(e) {
+      if (topNav.classList.contains('menu-active') && 
+          !topNav.contains(e.target) || 
+          e.target.closest('.nav-link')) {
+        topNav.classList.remove('menu-active');
+      }
+    }, {passive: true});
+    
+    // Hide/show navbar on scroll with improved threshold for mobile
     let lastScrollTop = 0;
     const delta = 5;
     const navbarHeight = topNav.offsetHeight;

@@ -230,12 +230,18 @@ article.post h1[data-toc-skip] {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.8rem; /* Increased padding for better touch area */
   margin-left: auto;
   color: var(--sidebar-muted-color);
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
   touch-action: manipulation; /* Optimize for touch */
   z-index: 1001; /* Ensure it's above other elements */
+  position: relative; /* For active state indicator */
+}
+
+/* Give visual feedback when menu is active */
+#top-nav.menu-active .menu-toggle {
+  color: var(--sidebar-active-color);
 }
 
 #top-nav .menu-toggle:hover,
@@ -246,6 +252,7 @@ article.post h1[data-toc-skip] {
 
 #top-nav .menu-toggle i {
   font-size: 1.5rem;
+  pointer-events: none; /* Ensure icon doesn't interfere with touch */
 }
 
 /* Make sure the hamburger menu shows on mobile no matter what */
@@ -273,9 +280,38 @@ article.post h1[data-toc-skip] {
     transition: all 0.2s ease;
   }
   
-  /* Show nav when menu is active */
+  /* Show nav when menu is active with better transition */
   #top-nav.menu-active .nav {
     display: flex !important;
+    opacity: 1;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #top-nav .nav-item {
+    width: 100%;
+    margin: 0;
+  }
+  
+  #top-nav .nav-link {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    touch-action: manipulation; /* Optimize for touch */
+  }
+  
+  /* Add visual active state for touch feedback */
+  #top-nav .nav-link:active {
+    background-color: var(--sidebar-hover-bg);
   }
 }
 
@@ -284,7 +320,6 @@ article.post h1[data-toc-skip] {
   width: 100%;
   padding: 0.5rem 1rem;
   background-color: transparent; /* Made search background transparent */
-  border-bottom: 1px solid var(--border-color);
 }
 
 #search-wrapper #search {
@@ -390,6 +425,11 @@ footer .footer-right a:hover {
   }
   
   /* Improved layout for search on mobile */
+  #search-wrapper {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  
   #search-wrapper #search {
     flex-direction: row;
     width: 100%;
@@ -423,5 +463,20 @@ footer .footer-right a:hover {
 @media (max-width: 767px) {
   #panel-wrapper {
     display: none;
+  }
+  
+  /* Enhance touch targets for mobile */
+  #top-nav .nav-link,
+  #top-nav .menu-toggle,
+  .footer-right a {
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* Make sure the menu can be triggered easily */
+  #top-nav .menu-toggle {
+    min-width: 44px;
   }
 }
