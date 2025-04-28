@@ -64,54 +64,58 @@
   </search>
 </div>
 
-<!-- Add JavaScript for improved scroll behavior and mobile menu toggle -->
+<!-- Mobile menu functionality with better touch support -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // For hide/show on scroll
-    var lastScrollTop = 0;
+  (function() {
     var navbar = document.getElementById('top-nav');
+    var menuToggle = document.querySelector('.menu-toggle');
+    
+    // Mobile menu toggle with improved touch handling
+    if (menuToggle) {
+      // Use touchstart for mobile devices for better responsiveness
+      menuToggle.addEventListener('touchstart', handleMenuToggle, {passive: false});
+      // Also keep click for desktop testing and accessibility
+      menuToggle.addEventListener('click', handleMenuToggle);
+    }
+    
+    function handleMenuToggle(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navbar.classList.toggle('menu-active');
+    }
+    
+    // Close menu when clicking/touching elsewhere
+    document.addEventListener('touchstart', handleOutsideClick, {passive: true});
+    document.addEventListener('click', handleOutsideClick);
+    
+    function handleOutsideClick(e) {
+      if (!navbar.classList.contains('menu-active')) return;
+      
+      // Close if click outside menu or on a nav link
+      var targetEl = e.target;
+      if (!navbar.contains(targetEl) || targetEl.closest('.nav-link')) {
+        navbar.classList.remove('menu-active');
+      }
+    }
+    
+    // Navbar visibility on scroll
+    var lastScrollTop = 0;
     var delta = 5;
     var navbarHeight = navbar.offsetHeight;
-    var showThreshold = 100; // Only show navbar when near the top (within 100px)
-
+    var showThreshold = 100;
+    
     window.addEventListener('scroll', function() {
       var st = window.pageYOffset || document.documentElement.scrollTop;
       
-      // Check if scrolled more than delta
-      if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+      if (Math.abs(lastScrollTop - st) <= delta) return;
       
-      // Only show navbar when near the top of the page
       if (st > showThreshold) {
-        // Hide navbar when not at the top
         navbar.classList.add('nav-up');
       } else {
-        // Show navbar only when near the top of the page
         navbar.classList.remove('nav-up');
       }
       
       lastScrollTop = st;
     });
-
-    // Mobile menu toggle - Fixed implementation
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    if(menuToggle) {
-      // Ensure this is executed only once
-      menuToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        navbar.classList.toggle('menu-active');
-      });
-    }
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (navbar.classList.contains('menu-active') && 
-          !navbar.contains(e.target) || 
-          e.target.closest('.nav-link')) {
-        navbar.classList.remove('menu-active');
-      }
-    });
-  });
+  })();
 </script>

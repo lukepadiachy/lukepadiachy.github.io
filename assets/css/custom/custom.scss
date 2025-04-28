@@ -314,6 +314,8 @@ footer .footer-right a:hover {
   /* Show hamburger menu on mobile */
   #top-nav .menu-toggle {
     display: block;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    touch-action: manipulation; /* Optimize for touch */
   }
   
   /* Hide navigation by default on mobile */
@@ -332,11 +334,18 @@ footer .footer-right a:hover {
     right: 0;
     z-index: 1000;
     padding: 0.5rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
   }
   
-  /* Show nav when menu is active */
+  /* Show nav when menu is active with animation */
   #top-nav.menu-active .nav {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
   
   #top-nav .nav-item {
@@ -347,6 +356,7 @@ footer .footer-right a:hover {
   #top-nav .nav-link {
     padding: 0.75rem 1rem;
     width: 100%;
+    touch-action: manipulation; /* Optimize for touch */
   }
   
   /* Improved layout for search on mobile */
