@@ -64,58 +64,65 @@
   </search>
 </div>
 
-<!-- Mobile menu functionality with better touch support -->
+<!-- Inline script for mobile menu - this should hopefully will work in all environments including GitHub Pages -->
 <script>
-  (function() {
-    var navbar = document.getElementById('top-nav');
-    var menuToggle = document.querySelector('.menu-toggle');
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get navigation elements
+    const topNav = document.getElementById('top-nav');
+    const menuToggle = document.querySelector('.menu-toggle');
     
-    // Mobile menu toggle with improved touch handling
-    if (menuToggle) {
-      // Use touchstart for mobile devices for better responsiveness
-      menuToggle.addEventListener('touchstart', handleMenuToggle, {passive: false});
-      // Also keep click for desktop testing and accessibility
-      menuToggle.addEventListener('click', handleMenuToggle);
+    if (!topNav || !menuToggle) return;
+    
+    // Make sure menu toggle is visible on mobile
+    if (window.innerWidth <= 849) {
+      menuToggle.style.display = 'block';
     }
     
-    function handleMenuToggle(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      navbar.classList.toggle('menu-active');
-    }
-    
-    // Close menu when clicking/touching elsewhere
-    document.addEventListener('touchstart', handleOutsideClick, {passive: true});
-    document.addEventListener('click', handleOutsideClick);
-    
-    function handleOutsideClick(e) {
-      if (!navbar.classList.contains('menu-active')) return;
-      
-      // Close if click outside menu or on a nav link
-      var targetEl = e.target;
-      if (!navbar.contains(targetEl) || targetEl.closest('.nav-link')) {
-        navbar.classList.remove('menu-active');
+    // Handle menu toggle interaction
+    function toggleMenu(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
       }
+      topNav.classList.toggle('menu-active');
     }
     
-    // Navbar visibility on scroll
-    var lastScrollTop = 0;
-    var delta = 5;
-    var navbarHeight = navbar.offsetHeight;
-    var showThreshold = 100;
+    // Add multiple event listeners for better mobile compatibility
+    menuToggle.addEventListener('click', toggleMenu);
+    
+    // Ensure mobile button works with touch events too
+    menuToggle.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      toggleMenu();
+    }, {passive: false});
+    
+    // Handle clicks outside the menu to close it
+    document.addEventListener('click', function(e) {
+      if (topNav.classList.contains('menu-active') && 
+          !topNav.contains(e.target) || 
+          e.target.closest('.nav-link')) {
+        topNav.classList.remove('menu-active');
+      }
+    });
+    
+    // Hide/show navbar on scroll
+    let lastScrollTop = 0;
+    const delta = 5;
+    const navbarHeight = topNav.offsetHeight;
+    const showThreshold = 100;
     
     window.addEventListener('scroll', function() {
-      var st = window.pageYOffset || document.documentElement.scrollTop;
+      const st = window.pageYOffset || document.documentElement.scrollTop;
       
       if (Math.abs(lastScrollTop - st) <= delta) return;
       
       if (st > showThreshold) {
-        navbar.classList.add('nav-up');
+        topNav.classList.add('nav-up');
       } else {
-        navbar.classList.remove('nav-up');
+        topNav.classList.remove('nav-up');
       }
       
       lastScrollTop = st;
     });
-  })();
+  });
 </script>

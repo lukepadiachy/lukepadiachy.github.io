@@ -226,21 +226,57 @@ article.post h1[data-toc-skip] {
 
 /* Hamburger menu for mobile */
 #top-nav .menu-toggle {
-  display: none; /* Hidden by default, shown on mobile */
+  display: none; /* Hidden by default, JS will show it when appropriate */
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   margin-left: auto;
   color: var(--sidebar-muted-color);
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  touch-action: manipulation; /* Optimize for touch */
+  z-index: 1001; /* Ensure it's above other elements */
 }
 
-#top-nav .menu-toggle:hover {
+#top-nav .menu-toggle:hover,
+#top-nav .menu-toggle:focus {
   color: var(--sidebar-active-color);
+  outline: none;
 }
 
 #top-nav .menu-toggle i {
   font-size: 1.5rem;
+}
+
+/* Make sure the hamburger menu shows on mobile no matter what */
+@media (max-width: 849px) {
+  #top-nav .menu-toggle {
+    display: block !important;
+  }
+  
+  /* Hide navigation by default on mobile */
+  #top-nav .nav {
+    display: none;
+    margin-top: 0.5rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--sidebar-bg);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  /* Show nav when menu is active */
+  #top-nav.menu-active .nav {
+    display: flex !important;
+  }
 }
 
 /* Move search to below the top navigation */
@@ -334,18 +370,12 @@ footer .footer-right a:hover {
     right: 0;
     z-index: 1000;
     padding: 0.5rem;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
+    transition: all 0.2s ease;
   }
   
-  /* Show nav when menu is active with animation */
+  /* Show nav when menu is active */
   #top-nav.menu-active .nav {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+    display: flex !important;
   }
   
   #top-nav .nav-item {
