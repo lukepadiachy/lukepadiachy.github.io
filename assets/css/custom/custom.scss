@@ -18,6 +18,100 @@ article.post h1[data-toc-skip] {
   font-weight: 700;
 }
 
+/* Fix featured post styling */
+.featured-post .post-preview {
+  text-decoration: none !important;
+  color: var(--text-color) !important;
+}
+
+.featured-post-preview {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .featured-post-preview {
+    flex-direction: row;
+  }
+  
+  .featured-post-image {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .featured-post-content {
+    width: 50%;
+    padding: 1.5rem;
+  }
+}
+
+.featured-post-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+@media (min-width: 768px) {
+  .featured-post-image {
+    height: auto;
+    min-height: 340px;
+    max-height: 600px;
+  }
+}
+
+.featured-post-content {
+  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .featured-post-content {
+    padding: 1.7rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+.featured-post .card-title {
+  color: var(--heading-color) !important;
+  margin-top: 0.1rem;
+  margin-bottom: 0.25rem;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.featured-post .featured-post-category {
+  margin-bottom: 0.15rem;
+}
+
+.featured-post .featured-post-description {
+  color: var(--text-color) !important;
+  margin-top: 0.1rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.featured-post .post-meta {
+  color: var(--text-color) !important;
+  font-size: 0.97rem;
+  margin-top: auto;
+}
+
+.category-badge {
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  padding: 0.18rem 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
 /* Custom Layout Changes - Convert sidebar to top navigation */
 
 /* Hide the sidebar */
