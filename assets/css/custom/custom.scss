@@ -142,7 +142,7 @@ article.post h1[data-toc-skip] {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 100; /* Increased z-index for better stacking */
   transition: transform 0.3s ease; /* Add transition for smooth hiding/showing */
   background-color: var(--body-bg); /* Add slight background color for better contrast */
 }
@@ -275,7 +275,7 @@ article.post h1[data-toc-skip] {
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1000; /* Higher z-index to ensure it appears above other content */
     padding: 0.5rem;
     transition: all 0.2s ease;
   }
@@ -285,6 +285,9 @@ article.post h1[data-toc-skip] {
     display: flex !important;
     opacity: 1;
     animation: fadeIn 0.2s ease-in-out;
+    /* Ensure menu is clickable and stays on top */
+    position: absolute;
+    z-index: 1001;
   }
   
   @keyframes fadeIn {
@@ -307,11 +310,26 @@ article.post h1[data-toc-skip] {
     padding: 0.75rem 1rem;
     width: 100%;
     touch-action: manipulation; /* Optimize for touch */
+    position: relative; /* Ensure item is positioned for proper event handling */
+    z-index: 2; /* Ensure clickability */
   }
   
   /* Add visual active state for touch feedback */
   #top-nav .nav-link:active {
     background-color: var(--sidebar-hover-bg);
+  }
+  
+  /* Add an overlay when menu is active to prevent clicks to content underneath */
+  #top-nav.menu-active::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    pointer-events: auto;
   }
 }
 
@@ -478,5 +496,16 @@ footer .footer-right a:hover {
   /* Make sure the menu can be triggered easily */
   #top-nav .menu-toggle {
     min-width: 44px;
+  }
+  
+  /* Ensure content doesn't interfere with menu interaction */
+  body.menu-open {
+    overflow: hidden;
+  }
+  
+  /* Add additional spacing for menu items to make them easier to tap */
+  #top-nav .nav-link {
+    margin: 0.25rem 0;
+    border-radius: 0.25rem;
   }
 }
