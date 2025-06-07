@@ -2,7 +2,7 @@
 title: "GitHub Pages: A Newbies Breakdown"
 description: GitHub Pages is a free and easy way to host websites directly from a GitHub repository.This guide will break down the basics of GitHub Pages.
 date: 2025-02-23 09:30:00 +0900
-categories: [GitHub]
+categories: [GitHub, Pages]
 tags: [blogpost, github, chirpy,github-pages, beginners]
 image: /assets/img/posts/2025-02/github.png
 ---

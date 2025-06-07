@@ -2,8 +2,8 @@
 title: "Azure DevOps for Beginners: Newbies Special"
 description: "New to Azure DevOps?  This beginner-friendly repository is your go-to chop-chop guide! Packed with info, tips,resources and tutorials. It’s designed to help you learn Azure DevOps "
 date: 2025-03-02 06:30:00 +0200
-categories: [Azure DevOps]
-tags: [azure, devops, tutorials, beginners, resources]
+categories: [Azure, DevOps]
+tags: [azure, devops, tutorials, beginners, resources,cloud]
 image: /assets/img/posts/2025-03/azure-devops.png
 ---
 
