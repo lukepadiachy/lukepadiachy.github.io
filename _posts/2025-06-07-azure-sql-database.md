@@ -81,6 +81,14 @@ After running the migrations on Visual Studio in the terminal, it would look som
 
 Success !! Congrats if this worked for you, if not.. hmm you could pop me a message on LinkedIn and we could debug it, but Im sure you got this!
 
+## **My Repository**
+
+Want to see the complete implementation? Check out my GitHub repository with all the code examples:
+
+### **[Azure SQL Database Demo](https://github.com/lukepadiachy/AzureSqlDatabaseDemo)**
+
+You can follow my commits to see exactly how I set this up, step by step.
+
 ## **Takeaway**
 Free stuff is cool stuff, especially since I'm able to create and explore things in the cloud. I dont have a database server in my house.. If I did , I'd say goodbye. We pretty much letting someone else handle the "infrastructure" of the database for us in the cloud. Overall this was really cool to learn and I'll most likely be making extended versions of this , next step , deploy a webapp on cloud and connect the database to it on cloud too. 
 
